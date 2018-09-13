@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "custom.css",
+	"sources": [
+		"../scss/custom.scss"
+	],
+	"names": [],
+	"mappings": ""
+}
