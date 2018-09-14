@@ -1,14 +1,16 @@
-//connect variable with xmlhttprequest function
-let xhttp = new XMLHttpRequest();
-function loadXMLDoc() {
-    xhttp.onreadystatechange = function () {
-        if (this.readyState === 4 && this.status === 200) {
-            // Typical action to be performed when the document is ready:
-            document.getElementById("demo").innerHTML = xhttp.responseText;
-        }
-    };
-    xhttp.open("GET", "https://randomuser.me/api/", true);
-    xhttp.send();
+let people;
+fetch('https://randomuser.me/api/?results=5&format=json').then(response => {
+        return response.json();
+    }).then(peopleResponse => {
+    people = peopleResponse;
+    peopleLength();
+}).catch(err => {
+
+    });
+
+function peopleLength(){
+    let persons;
+
 }
 
 
